@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="style.css" rel="stylesheet">
+  <script type="text/javascript" src="script.js"></script>
+
+  <title>Projeto 2</title>
+</head>
+<body>
+
+
+  <table>
+    <form>
+      
+      <td>
+        <div name="h2">
+          <h2 >Ficha Cadastral</h2>
+        </div>
+
+      </td>
+
+      <div name="nome">
+              <tr>
+        <td>
+          <label>Nome:</label>
+          <input type="text" id="nome" pattern = ".{3,55}" oninput="this.value = this.value.replace(/[^a-zA-Z]/g, '')" title="Min 3 caracteres" required>
+          <label>Sobrenome:</label>
+          <input type="text" id="sobrenome" pattern="[A-Za-zÀ-ú\s]+" oninput="this.value = this.value.replace(/[^a-zA-ZÀ-ú\s]/g, '')" title="Apenas letras e espaços" required>
+
+        
+        
+        </td>
+      </td>
+
+      </div>
+      <tr>
+        <td>
+          <label>RG: </label>
+          <input type="text" id="rg"  required>
+          <label>CPF:</label>
+          <input type="text" id="cpf" maxlength="14" onblur="this.value = formatarCPF(this.value)" pattern="\d{3}\.\d{3}\.\d{3}-\d{2}" title="Digite um CPF valido" required>       
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <label>CEP:</label>
+          <input name ="cep" type="text" id="cep" value="" size="10" onblur="pesquisacep(this.value)" oninput="this.value = this.value.replace(/[^0-9]/g, '')" required/>
+        </td>
+      </tr>
+
+
+      <tr>
+        <td>
+          <label>Endereço:</label>
+          <input type="text" id="endereco" maxlength="55" required>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <label>Numero:</label>
+          <input type="text" id="numero" required>
+          <label>Complemento:</label>
+          <input type="text" id="complemento" required>
+          <label>Bairro:</label>
+          <input type="text" id="bairro" required>
+
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <label>Cidade:</label>
+          <input type="text" id="cidade" required>
+          <label>UF:</label>
+          <input type="text" id="uf" required>
+        </td>
+      </tr>
+
+      <tr>
+        <td>
+          <label for="sexo">Sexo:</label >
+          <select id="sexo" name="sexo">
+            <option value="masculino">Masculino</option required>
+            <option value="feminino">Feminino</option required>
+          </select>
+          <label></label>
+          <label for="datanascimento">Data de Nascimento: </label>
+          <input type="date" id="datanascimento" >
+        </td>
+      </tr>
+    
+      <div name="situacaocivil">
+        <tr>
+          <td>       
+              <label for="situacaocivil">Situação Civil:</label>
+          
+              <input type="radio" id="situacaoSolteiro" name="situacaocivil" value="solteiro" required>
+              <label for="situacaocivil">Solteiro(a)</label>
+              
+              <input type="radio" id="situacaoCasado" name="situacaocivil" value="casado" required>
+              <label for="situacaocivil">Casado(a)</label>
+              
+              <input type="radio" id="situacaoViuvo" name="situacaocivil" value="viuvo" required>
+              <label for="situacaocivil">Viúvo(a)</label>
+              
+          </td>
+        </tr>
+      </div>
+      <div name="botao">
+        <tr>
+          <td>
+            <button onclick="inserirDados()">Cadastrar</button>
+          </td>
+        </tr>
+      </div>
+      </div>
+    </form>
+  </table>
+
+  <table id="tabela-dados">
+    <thead>
+      <tr>
+        <th>Nome</th>
+        <th>Sobrenome</th>
+        <th>RG</th>
+        <th>CPF</th>
+        <th>CEP</th>
+        <th>Endereço</th>
+        <th>Numero</th>
+        <th>Complemento</th>
+        <th>Bairro</th>
+        <th>Cidade</th>
+        <th>UF</th>
+        <th>Sexo</th>
+        <th>Data de Nascimento</th>
+        <th>Situação Civil</th>
+      </tr>
+    </thead>
+    <tbody>
+    </tbody>
+  </table>
+  
+</body>
+</html>

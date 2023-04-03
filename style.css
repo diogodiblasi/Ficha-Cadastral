@@ -1,0 +1,100 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #cad6f094;
+  }
+  
+  h2 {
+    text-align: center;
+    font-size: 38px;
+    margin-top: 5px;
+    
+  }
+  
+  table {
+    width: 45%;
+    border-collapse: collapse;
+    margin: 0 auto;
+    background-color: white;
+    border-radius: 50px;
+  }
+  
+  td {
+    padding: 10px;
+  }
+  #uf{
+    width: 7,5%;
+  }
+  
+  label {
+    display: inline-block ;
+    width: 100px;
+    margin-left: 12px;
+  }
+  label[for="uf"] {
+  margin-left: 100px;
+  }
+
+  #datanascimento{
+    width: 20%;
+  }
+
+  button {
+    width: 100%;
+    background-color: #0077cc;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    border-radius: 25px;
+    margin: 0 auto;    
+    
+}
+
+#endereco{
+    width: 70%;
+}
+#numero{
+  width: 8%;
+}
+#complemento{
+  width: 15%;
+}
+#bairro{
+  width: 18%;
+  margin-left: -50px;
+}
+#uf{
+  width: 20%;
+  margin-left: -50px;
+}
+  
+  button:hover {
+    background-color: #005fa3;
+  }
+  
+  button:active {
+    background-color: #004d85;
+  }
+
+
+  
+
+  #tabela-dados {
+    margin-top: 20px;
+    border-collapse: collapse;
+    width: 25%;
+    background-color: #e8f1f2;
+  }
+  
+  #tabela-dados th,
+  #tabela-dados td {
+    padding: 10px;
+    border: 1px solid #ddd;
+    text-align: center;
+  }
+  
+  #tabela-dados th {
+    background-color: #147ba0;
+    font-weight: bold;
+    text-align: center;
+  }
+  
